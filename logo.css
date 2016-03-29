@@ -1,0 +1,221 @@
+/*You can use the google fonts if you like,but it might cause some problem in and only in China*/
+@import url(https://fonts.lug.ustc.edu.cn/css?family=Righteous);
+/*@import url(https://fonts.googleapis.com/css?family=Righteous);*/
+
+
+html, body {
+  height: 100%;
+}
+
+body {
+  background: #EEE;
+  font: 4.5em/1 Righteous, Impact;
+  border: none;
+}
+
+svg {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+
+.moverect {
+  animation: moving-the-rect 4s ease-in-out;
+  animation-fill-mode: both;
+  -webkit-animation: moving-the-rect 4s ease-in-out;
+  -webkit-animation-fill-mode: both;
+  -moz-animation: moving-the-rect 4s ease-in-out;
+  -moz-animation-fill-mode: both;
+}
+
+
+#mask-path {
+  animation: moving-the-mask 1.7s ease-in-out;
+  animation-delay: 2.3s;
+  animation-fill-mode: both;
+  -webkit-animation-name: moving-the-mask 1.7s ease-in-out;
+  -webkit-animation-delay: 2.3s;
+  -webkit-animation-fill-mode: both;
+  -moz-animation-name: moving-the-mask 1.7s ease-in-out;
+  -moz-animation-delay: 2.3s;
+  -moz-animation-fill-mode: both;
+}
+
+
+
+
+/*:nth-child(n) 选择器匹配属于其父元素的第 N 个子元素，不论元素的类型。*/
+.colorrect .moverect:nth-child(1) {
+  fill: #4a4a4a;
+  border: none;
+}
+
+.colorrect .moverect:nth-child(2) {
+  fill: #F2CD5C;
+  border: none;
+}
+
+.colorrect .moverect:nth-child(3) {
+  fill: #65BFA6;
+  border: none;
+}
+
+.colorrect .moverect:nth-child(4) {
+  fill: #166973;
+  border: none;
+}
+
+.colorrect .moverect:nth-child(5) {
+  fill: #F26444;
+  border: none;
+}
+
+.colorrect .moverect:nth-child(6) {
+  fill: #15283F;
+  border: none;
+}
+
+.shadow {
+  -webkit-transform: translate(5px, 5px);
+  -ms-transform: translate(5px, 5px);
+  transform: translate(5px, 5px);
+}
+
+.moverect--shadow{
+  height: 100%;
+  width: 100%;
+  fill: #000;
+  fill-opacity: .2;
+}
+/*--Moving the rect elements.--------------------------*/
+@-webkit-keyframes moving-the-rect {
+	0%{-webkit-transform-origin: 0 150px;
+       -ms-transform-origin: 0 150px;
+       transform-origin: 0 150px;
+       -webkit-transform: scale(0, 1) translate(0, 0);
+       -ms-transform: scale(0, 1) translate(0, 0);
+       transform: scale(0, 1) translate(0, 0);
+      }
+    40% {
+       -webkit-transform: scale(1, 1) translate(20px, 0);
+       -ms-transform: scale(1, 1) translate(10px, 0);
+       transform: scale(1, 1) translate(20px, 0);
+      }
+    40% {
+       -webkit-transform: scale(1, 1) translate(10px, 0);
+       -ms-transform: scale(1, 1) translate(10px, 0);
+       transform: scale(1, 1) translate(10px, 0);
+    }
+    100% {
+       -webkit-transform: scale(0.24, 1) translate(13px, 0);
+       -ms-transform: scale(0.24, 1) translate(13px, 0);
+       transform: scale(0.24, 1) translate(13px, 0);
+    }
+}
+
+@-moz-keyframes moving-the-rect {
+	0%{-webkit-transform-origin: 0 150px;
+       -ms-transform-origin: 0 150px;
+       -moz-transform-origin: 0 150px;
+       transform-origin: 0 150px;
+       -webkit-transform: scale(0, 1) translate(0, 0);
+       -ms-transform: scale(0, 1) translate(0, 0);
+       -moz-transform: scale(0, 1) translate(0, 0);
+       transform: scale(0, 1) translate(0, 0);
+      }
+    40% {
+       -webkit-transform: scale(1, 1) translate(20px, 0);
+       -ms-transform: scale(1, 1) translate(10px, 0);
+       -moz-transform: scale(1, 1) translate(10px, 0);
+       transform: scale(1, 1) translate(20px, 0);
+      }
+    40% {
+       -webkit-transform: scale(1, 1) translate(10px, 0);
+       -ms-transform: scale(1, 1) translate(10px, 0);
+       -moz-transform: scale(1, 1) translate(10px, 0);
+       transform: scale(1, 1) translate(10px, 0);
+    }
+    100% {
+       -webkit-transform: scale(0.24, 1) translate(13px, 0);
+       -ms-transform: scale(0.24, 1) translate(13px, 0);
+       -moz-transform: scale(0.24, 1) translate(13px, 0);
+       transform: scale(0.24, 1) translate(13px, 0);
+    }
+}
+
+@keyframes moving-the-rect {
+	0%{-webkit-transform-origin: 0 150px;
+       -ms-transform-origin: 0 150px;
+       transform-origin: 0 150px;
+       -webkit-transform: scale(0, 1) translate(0, 0);
+       -ms-transform: scale(0, 1) translate(0, 0);
+       transform: scale(0, 1) translate(0, 0);
+      }
+    40% {
+       -webkit-transform: scale(1, 1) translate(10px, 0);
+       -ms-transform: scale(1, 1) translate(10px, 0);
+       transform: scale(1, 1) translate(10px, 0);
+      }
+    40% {
+       -webkit-transform: scale(1, 1) translate(10px, 0);
+       -ms-transform: scale(1, 1) translate(10px, 0);
+       transform: scale(1, 1) translate(10px, 0);
+    }
+    100% {
+       -webkit-transform: scale(0.5, 1) translate(13px, 0);
+       -ms-transform: scale(0.5, 1) translate(13px, 0);
+       transform: scale(0.5, 1) translate(13px, 0);
+    }
+
+}
+
+
+/*--Moving the clippath element.------------------------*/
+@-webkit-keyframes moving-the-mask {
+	0%{-webkit-transform-origin: 0 150px;
+       -ms-transform-origin: 0 150px;
+       transform-origin: 0 150px;
+       -webkit-transform: scale(1, 1) translate(0px, 0);
+       -ms-transform: scale(1, 1) translate(0px, 0);
+       transform: scale(1, 1) translate(0px, 0);
+	}
+	100%{
+       -webkit-transform: scale(1, 1) translate(170px, 0);
+       -ms-transform: scale(1, 1) translate(170px, 0);
+       transform: scale(1, 1) translate(170px, 0);
+	}
+}
+
+@-moz-keyframes moving-the-mask{
+	0%{-webkit-transform-origin: 0 150px;
+       -ms-transform-origin: 0 150px;
+       -moz-transform-origin: 0 150px;
+       transform-origin: 0 150px;
+       -webkit-transform: scale(1, 1) translate(0px, 0);
+       -ms-transform: scale(1, 1) translate(0px, 0);
+       -moz-transform: scale(1, 1) translate(0px, 0);
+       transform: scale(1, 1) translate(0px, 0);
+	}
+	100%{
+       -webkit-transform: scale(1, 1) translate(170px, 0);
+       -ms-transform: scale(1, 1) translate(170px, 0);
+       -moz-transform: scale(1,1) translate(170px,0);
+       transform: scale(1, 1) translate(170px, 0);
+	}
+}
+
+@keyframes moving-the-mask {
+	0%{-webkit-transform-origin: 0 150px;
+       -ms-transform-origin: 0 150px;
+       transform-origin: 0 150px;
+       -webkit-transform: scale(1, 1) translate(0px, 0);
+       -ms-transform: scale(1, 1) translate(0px, 0);
+       transform: scale(1, 1) translate(0px, 0);
+	}
+	100%{
+       -webkit-transform: scale(1, 1) translate(170px, 0);
+       -ms-transform: scale(1, 1) translate(170px, 0);
+       transform: scale(1, 1) translate(170px, 0);
+	}
+}
